@@ -2,8 +2,8 @@ import Styled from "styled-components"
 
 export const Box = Styled.div`
     border: solid 2px black;
-    height : 15vh;
-    width : 40vw;
+    height : 8vh;
+    width : 35vw;
     display : flex;
     justify-content : space-around;
     color : white;
@@ -12,7 +12,7 @@ export const Box = Styled.div`
 
 `
 export const StyledSection = Styled.section`
-    background-color : #464646;
+    background-color : #211921;
     display : flex;
     justify-content : space-evenly;
     flex-wrap : wrap;

@@ -12,17 +12,25 @@ import steve from "./imgProg/steve.png"
 import billy from "./imgProg/billy.png"
 
 function Programacao(){
+  // rascunho dentro do returno : 
+  //<section>
+  //           {desenhosManha.map((item)=>(
+  //            <h2>{item.nome}</h2>
+  //           ))}
+  //         </section>
 
 const [desenhos, setDesenhos] = useState([
-    {nome: "O laboratório de Dexter", hora: "7:00h", imagem: Dexter},
-    {nome: "A vaca e o frango", hora: "8:00h", imagem: vFrango },
-    {nome: "Du, Dudu e Edu", hora: "9:00h", imagem: Du},
-    {nome: "Coragem, o cão covarde", hora: "10h", imagem: Coragem },
-    {nome: "Turma da Mônica Jovem", hora: "11h", imagem: Monica },
-    {nome: "Irmão do Jorel", hora: "12h", imagem: jorel },
-    {nome: "Steve Universo", hora: "13h", imagem: steve },
-    {nome: "Billy e Mandy", hora: "10h", imagem: billy }
+    {nome: "O laboratório de Dexter", hora: "7:00h", imagem: Dexter, desenhosManha : true},
+    {nome: "A vaca e o frango", hora: "8:00h", imagem: vFrango, desenhosManha : true },
+    {nome: "Du, Dudu e Edu", hora: "9:00h", imagem: Du, desenhosManha : true},
+    {nome: "Coragem, o cão covarde", hora: "10h", imagem: Coragem, desenhosManha : true },
+    {nome: "Turma da Mônica Jovem", hora: "11h", imagem: Monica, desenhosManha : true },
+    {nome: "Irmão do Jorel", hora: "12h", imagem: jorel, desenhosManha : false},
+    {nome: "Steve Universo", hora: "13h", imagem: steve, desenhosManha : false },
+    {nome: "Billy e Mandy", hora: "14h", imagem: billy, desenhosManha : false}
 ])
+
+const desenhosManha = desenhos.filter((item)=> item.desenhosManha == true)
 
     return(
         <S.StyledSection>
